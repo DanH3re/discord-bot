@@ -6,6 +6,11 @@ client.login(token);
 client.on('ready', () => {
     console.log('Bot ON');
 });
+var server_port = process.env.YOUR_PORT || process.env.PORT || 80;
+var server_host = process.env.YOUR_HOST || '0.0.0.0';
+server.listen(server_port, server_host, function() {
+    console.log('Listening on port %d', server_port);
+});
 
 client.on('guildMemberAdd', member => {
     member.guild.channels.cache.get("810643519659180082").send({
