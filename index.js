@@ -110,7 +110,7 @@ if(!server_queue) {
   } 
 } else {
   server_queue.songs.push(song);
-  message.channel.send(`<:queue:850726004297302046> **Песня __${song.title}__ добавлена в очередь на __${server_queue.songs.length}__ месте.**`);
+  message.channel.send(`<:queue:864199217739988992> **Песня __${song.title}__ добавлена в очередь на __${server_queue.songs.length}__ месте.**`);
 }
 
 } else if(command === 'stop'){
