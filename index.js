@@ -1,3 +1,4 @@
+  
 const Discord = require('discord.js')
 const client = new Discord.Client({ partials: ['USER', 'GUILD_MEMBER', 'CHANNEL', 'MESSAGE', 'REACTION'] });
 var prefix = '/'
@@ -54,7 +55,7 @@ client.on("message", async message => {
     
         if(command === 'reset'){
         deletemessage()
-        resetBot;
+        resetBot()
        
     };
 
@@ -243,7 +244,6 @@ function getRandomNumber(min,max){
 }
 
 function resetBot() {
-    .then(msg => client.destroy())
-    .then(() => client.login(<your bot token here>));
+  console.log('RESTARTING...');
+  process.exit(1);
 }
-
