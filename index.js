@@ -242,7 +242,7 @@ function getRandomNumber(min,max){
   return Math.floor(Math.random()*(max-min+1)+min);
 }
 
-function resetBot {
+function resetBot() {
     .then(msg => client.destroy())
     .then(() => client.login(<your bot token here>));
 }
