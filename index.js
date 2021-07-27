@@ -51,6 +51,12 @@ client.on("message", async message => {
         deletemessage()
        
     };
+    
+        if(command === 'reset'){
+        deletemessage()
+        resetBot;
+       
+    };
 
     if(command === 'm'){
       message = "";
@@ -234,5 +240,10 @@ function isAdmin(user) {
 
 function getRandomNumber(min,max){
   return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+function resetBot {
+    .then(msg => client.destroy())
+    .then(() => client.login(<your bot token here>));
 }
 
