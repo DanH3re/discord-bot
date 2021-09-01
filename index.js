@@ -7,6 +7,7 @@ const token = 'ODE1MTc2NzUwNjk0NDAwMDEw.YDomgg.P8UPrj_ziAwT20GN4W157NmOur0';
 const queue = new Map();
 const ytdl = require('ytdl-core');
 const ytSearch = require('yt-search')
+var imgList = ["https://cdn.discordapp.com/attachments/810647550641963008/881964959070822430/unknown.png", "https://media.discordapp.net/attachments/810647550641963008/844649466908770334/unknown.png?width=1202&height=676", "https://media.discordapp.net/attachments/810647550641963008/823313291274878986/unknown.png?width=1205&height=676"];
 
 client.login(token);
 client.on('ready', () => {
@@ -14,18 +15,19 @@ client.on('ready', () => {
 });
 
 client.on('guildMemberAdd', member => {
+  var image = imgList[Math.floor(Math.random() * imgList.length)];
     member.guild.channels.cache.get("810643519659180082").send({
         "content": `${member}`,
         "embed": 
           {
-            "description": "**:performing_arts: Тут вы можете получить роль:**\n<#879279441103175721>\n\n**:question: Если вам не выдают роль или есть вопрос пишите в ЛС:**\n<@308299504044605452>\n\n**:busts_in_silhouette: Насчет вступления:**\n<@308299504044605452>\n<#863335804722348073> \n\n**:money_with_wings: По финансовым вопросам:**\n<@308299504044605452>",
+            "description": "**:performing_arts: Тут вы можете получить роль:**\n<#810640147854000141>\n\n**:question: Если вам не выдают роль или есть вопрос пишите в ЛС:**\n<@308299504044605452>\n\n**:busts_in_silhouette: По вопросам вступления:**\n<@308299504044605452> \n\n**:money_with_wings: По финансовым вопросам:**\n<@308299504044605452>",
             "color": 16753408,
             "author": {
               "name": "Добро пожаловать в дискорд канал Rothschild Family",
               "icon_url": "https://imgur.com/OYqsnfg.png"
             },
             "image": {
-              "url": "https://cdn.discordapp.com/attachments/810647550641963008/813051137883373629/unknown.png"
+              "url": `${image}`
             },
             "thumbnail": {
               "url": "https://imgur.com/99X6OuW.png"
