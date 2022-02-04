@@ -26,7 +26,7 @@ client.on('guildMemberAdd', member => {
         "url": `${image}`
       },
       "thumbnail": {
-        "url": "https://cdn.discordapp.com/attachments/899321217838878793/918891527382642688/online-logo-generator-featuring-the-god-of-time-2920k_1.png"
+        "url": "https://i.imgur.com/tRi7oL7.png"
       }
     }
 });
