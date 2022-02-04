@@ -16,14 +16,14 @@ client.on('ready', () => {
 client.on('guildMemberAdd', member => {
   var image = imgList[Math.floor(Math.random() * imgList.length)];
     member.guild.channels.cache.get("810643519659180082").send({
-  "content": "${member}",
+  "content": `${member}`,
   "embed": 
     {
       "title": "Добро пожаловать в **Rothschild Family**",
       "description": "**В первую очередь получите роль:**\n<:role:939225432694341632>  [Выдача роли](https://discord.com/channels/810640147854000138/879279441103175721)\n\n**Полезные каналы**\n<:leader:939230416504754176> [Наши лидерки](https://discord.com/channels/810640147854000138/879279441103175721)\n<:partners:939231876843962469> [Наши партнеры](https://discord.com/channels/810640147854000138/879279441103175721)\n<:galleyy:939231581128765470> [Галерея](https://discord.com/channels/810640147854000138/879279441103175721)\n\n**Соц. Сети**\n<:youtube:939232239160528926> [YouTube](https://www.youtube.com/channel/UCq8BM7uQmBsWKyNLl2Ps0Tg)",
       "color": 16764416,
       "image": {
-        "url": "https://cdn.discordapp.com/attachments/939205663706468363/939211464563097690/3.png"
+        "url": `${image}`
       },
       "thumbnail": {
         "url": "https://cdn.discordapp.com/attachments/899321217838878793/918891527382642688/online-logo-generator-featuring-the-god-of-time-2920k_1.png"
