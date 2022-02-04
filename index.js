@@ -30,6 +30,7 @@ client.on('guildMemberAdd', member => {
       }
     }
 });
+});
 
 client.on("message", async message => {
     if (message.author.bot) return;
