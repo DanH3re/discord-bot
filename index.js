@@ -7,8 +7,7 @@ const token = 'ODE1MTc2NzUwNjk0NDAwMDEw.YDomgg.P8UPrj_ziAwT20GN4W157NmOur0';
 const queue = new Map();
 const ytdl = require('ytdl-core');
 const ytSearch = require('yt-search')
-var imgList = ["https://cdn.discordapp.com/attachments/939205663706468363/939211463598419998/1.png,https://cdn.discordapp.com/attachments/939205663706468363/939211464013676554/2.png,https://cdn.discordapp.com/attachments/939205663706468363/939211464563097690/3.png,https://cdn.discordapp.com/attachments/939205663706468363/939211464940613762/4.png,https://cdn.discordapp.com/attachments/939205663706468363/939211465422946304/5.png,https://cdn.discordapp.com/attachments/939205663706468363/939211465846554644/6.png,https://cdn.discordapp.com/attachments/939205663706468363/939211466198900806/7.png,https://cdn.discordapp.com/attachments/939205663706468363/939211466588954644/8.png,https://cdn.discordapp.com/attachments/939205663706468363/939211467171971172/9.png"];
-
+var imgList = ["https://cdn.discordapp.com/attachments/939205663706468363/939211463598419998/1.png","https://cdn.discordapp.com/attachments/939205663706468363/939211464013676554/2.png","https://cdn.discordapp.com/attachments/939205663706468363/939211464563097690/3.png","https://cdn.discordapp.com/attachments/939205663706468363/939211464940613762/4.png","https://cdn.discordapp.com/attachments/939205663706468363/939211465422946304/5.png","https://cdn.discordapp.com/attachments/939205663706468363/939211465846554644/6.png","https://cdn.discordapp.com/attachments/939205663706468363/939211466198900806/7.png","https://cdn.discordapp.com/attachments/939205663706468363/939211466588954644/8.png","https://cdn.discordapp.com/attachments/939205663706468363/939211467171971172/9.png"];
 client.login(token);
 client.on('ready', () => {
     console.log('Bot ON');
