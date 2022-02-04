@@ -15,26 +15,24 @@ client.on('ready', () => {
 
 client.on('guildMemberAdd', member => {
   var image = imgList[Math.floor(Math.random() * imgList.length)];
-    member.guild.channels.cache.get("810643519659180082").send({
-        "content": `${member}`,
-        "embed": 
-          {
-            "description": "**:performing_arts: Тут вы можете получить роль:**\n<#879279441103175721>\n\n**:question: Если вам не выдают роль или есть вопрос пишите в ЛС:**\n<@308299504044605452>",
-            "color": 16753408,
-            "author": {
-              "name": "Добро пожаловать в дискорд канал Rothschild Family",
-              "icon_url": "https://imgur.com/OYqsnfg.png"
-            },
-            "image": {
-              "url": `${image}`
-            },
-            "thumbnail": {
-              "url": "https://imgur.com/99X6OuW.png"
-            }
-          }
-        
-      })
-});
+    member.guild.channels.cache.get("810643519659180082").send(
+    {
+  "content": `${member}`,
+  "embeds": [
+    {
+      "title": "Добро пожаловать в **Rothschild Family**",
+      "description": "**В первую очередь получите роль:**\n<:role:939225432694341632>  [Выдача роли](https://discord.com/channels/810640147854000138/879279441103175721)\n\n**Полезные каналы**\n<:leader:939230416504754176> [Наши лидерки](https://discord.com/channels/810640147854000138/879279441103175721)\n<:partners:939231876843962469> [Наши партнеры](https://discord.com/channels/810640147854000138/879279441103175721)\n<:galleyy:939231581128765470> [Галерея](https://discord.com/channels/810640147854000138/879279441103175721)\n\n**Соц. Сети**\n<:youtube:939232239160528926> [YouTube](https://www.youtube.com/channel/UCq8BM7uQmBsWKyNLl2Ps0Tg)",
+      "color": 16764416,
+      "image": {
+        "url": `${image}`
+      },
+      "thumbnail": {
+        "url": "https://cdn.discordapp.com/attachments/899321217838878793/918891527382642688/online-logo-generator-featuring-the-god-of-time-2920k_1.png"
+      }
+    }
+  ]
+}
+);
 
 client.on("message", async message => {
     if (message.author.bot) return;
