@@ -33,7 +33,7 @@ client.on('guildMemberAdd', member => {
 });
 
 client.on('guildMemberRemove', async (member) => {
-  let user = member.toString();
+  let user = member.username;
   member.guild.channels.cache.get("842879008547012649").send(
 
     {
