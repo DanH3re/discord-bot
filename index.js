@@ -39,7 +39,7 @@ client.on('guildMemberRemove', async (member) => {
       "content": null,
       "embed": 
         {
-          "description": `:door: ${member} вышел с сервера **Rothschild Family**.`,
+          "description": `:door: ${member.toString()} вышел с сервера **Rothschild Family**.`,
           "color": 16711680
   
     }}
