@@ -33,13 +33,14 @@ client.on('guildMemberAdd', member => {
 });
 
 client.on('guildMemberRemove', async (member) => {
+  let user = member.toString();
   member.guild.channels.cache.get("842879008547012649").send(
 
     {
       "content": null,
       "embed": 
         {
-          "description": `:door: ${member.toString()} вышел с сервера **Rothschild Family**.`,
+          "description": `:door: ${user} вышел с сервера **Rothschild Family**.`,
           "color": 16711680
   
     }}
