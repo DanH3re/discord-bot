@@ -6,7 +6,8 @@ const token = 'ODE1MTc2NzUwNjk0NDAwMDEw.YDomgg.P8UPrj_ziAwT20GN4W157NmOur0';
 
 const queue = new Map();
 const ytdl = require('ytdl-core');
-const ytSearch = require('yt-search')
+const ytSearch = require('yt-search');
+const moment = require('moment');
 var imgList = ["https://cdn.discordapp.com/attachments/939205663706468363/939211463598419998/1.png","https://cdn.discordapp.com/attachments/939205663706468363/939211464013676554/2.png","https://cdn.discordapp.com/attachments/939205663706468363/939211464563097690/3.png","https://cdn.discordapp.com/attachments/939205663706468363/939211464940613762/4.png","https://cdn.discordapp.com/attachments/939205663706468363/939211465422946304/5.png","https://cdn.discordapp.com/attachments/939205663706468363/939211465846554644/6.png","https://cdn.discordapp.com/attachments/939205663706468363/939211466198900806/7.png","https://cdn.discordapp.com/attachments/939205663706468363/939211466588954644/8.png","https://cdn.discordapp.com/attachments/939205663706468363/939211467171971172/9.png"];
 client.login(token);
 client.on('ready', () => {
@@ -20,10 +21,10 @@ client.on('guildMemberAdd', member => {
   "embed": 
     {
       "title": "Добро пожаловать в **Rothschild Family**",
-      "description": "**В первую очередь получите роль:**\n<:role:939225432694341632>  [Выдача роли](https://discord.com/channels/810640147854000138/879279441103175721)\n\n**Полезные каналы**\n<:leader:939230416504754176> [Наши лидерки](https://discord.com/channels/810640147854000138/879279441103175721)\n<:partners:939231876843962469> [Наши партнеры](https://discord.com/channels/810640147854000138/879279441103175721)\n<:galleyy:939231581128765470> [Галерея](https://discord.com/channels/810640147854000138/879279441103175721)\n\n**Соц. Сети**\n<:youtube:939232239160528926> [YouTube](https://www.youtube.com/channel/UCq8BM7uQmBsWKyNLl2Ps0Tg)",
+      "description": "**В первую очередь получите роль:**\n<:role:939225432694341632>  [Выдача роли](https://discord.com/channels/810640147854000138/879279441103175721)\n\n**Полезные каналы**\n<:leader:939230416504754176> [Наши лидерки](https://discord.com/channels/810640147854000138/897498450504056852)\n<:partners:939231876843962469> [Наши партнеры](https://discord.com/channels/810640147854000138/896653447347195945)\n<:galleyy:939231581128765470> [Галерея](https://discord.com/channels/810640147854000138/939205663706468363)\n\n**Соц. Сети**\n<:youtube:939232239160528926> [YouTube](https://www.youtube.com/channel/UCq8BM7uQmBsWKyNLl2Ps0Tg)",
       "color": 16764416,
       "image": {
-        "url": "https://cdn.discordapp.com/attachments/939205663706468363/939211464563097690/3.png"
+        "url": `${image}`
       },
       "thumbnail": {
         "url": "https://cdn.discordapp.com/attachments/899321217838878793/918891527382642688/online-logo-generator-featuring-the-god-of-time-2920k_1.png"
@@ -33,14 +34,16 @@ client.on('guildMemberAdd', member => {
 });
 
 client.on('guildMemberRemove', async (member) => {
-  let user = member.username;
+  let user = member.displayName;
+  let time = moment.utc(member.joinedAt).format('DD/MM/YY');
+
   member.guild.channels.cache.get("842879008547012649").send(
 
     {
       "content": null,
       "embed": 
         {
-          "description": `:door: ${user} вышел с сервера **Rothschild Family**.`,
+          "description": `:door: **${user}** вышел с сервера **Rothschild Family**.\n:hourglass: Зашел: ${time}`,
           "color": 16711680
   
     }}
