@@ -1,7 +1,7 @@
   
 const Discord = require('discord.js')
 const client = new Discord.Client({ partials: ['USER', 'GUILD_MEMBER', 'CHANNEL', 'MESSAGE', 'REACTION'] });
-var prefix = '/'
+var prefix = '!'
 const token = 'ODE1MTc2NzUwNjk0NDAwMDEw.YDomgg.P8UPrj_ziAwT20GN4W157NmOur0';
 
 const queue = new Map();
