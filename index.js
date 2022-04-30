@@ -11,7 +11,7 @@ const moment = require('moment');
 var imgList = ["https://cdn.discordapp.com/attachments/939205663706468363/939211463598419998/1.png","https://cdn.discordapp.com/attachments/939205663706468363/939211464013676554/2.png","https://cdn.discordapp.com/attachments/939205663706468363/939211464563097690/3.png","https://cdn.discordapp.com/attachments/939205663706468363/939211464940613762/4.png","https://cdn.discordapp.com/attachments/939205663706468363/939211465422946304/5.png","https://cdn.discordapp.com/attachments/939205663706468363/939211465846554644/6.png","https://cdn.discordapp.com/attachments/939205663706468363/939211466198900806/7.png","https://cdn.discordapp.com/attachments/939205663706468363/939211466588954644/8.png","https://cdn.discordapp.com/attachments/939205663706468363/939211467171971172/9.png"];
 client.login(token);
 client.on('ready', () => {
-    console.log('Bot ON');
+    console.log('Bot ON!');
 });
 
 client.on('guildMemberAdd', member => {
